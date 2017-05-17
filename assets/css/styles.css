@@ -1,0 +1,13 @@
+.footer {
+padding: 10px;
+}
+.footer .row {
+	margin-bottom: 0 !important;
+}
+
+.footer .social .collection {
+	border:  none;
+}
+.footer .social .collection .collection-item {
+	display: inline;
+}

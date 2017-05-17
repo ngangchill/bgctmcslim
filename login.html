@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="msapplication-tap-highlight" content="no">
+		<!--Import Google Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="icon" href="favicon.ico" sizes="32x32">
+		<!--  Android 5 Chrome Color-->
+		<title>FAB :: Home</title>
+		<meta name="theme-color" content="#EE6E73">
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+		<link rel="stylesheet" href="assets/css/styles.css">
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+		<script>
+		  var _0x947c=["\x41\x49\x7A\x61\x53\x79\x42\x39\x45\x78\x61\x6E\x6C\x6E\x37\x4A\x39\x79\x42\x61\x50\x49\x45\x75\x67\x51\x4E\x49\x62\x62\x69\x6B\x41\x63\x68\x68\x64\x38\x6F","\x67\x6F\x62\x6C\x69\x6E\x2D\x61\x37\x30\x34\x33\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x61\x70\x70\x2E\x63\x6F\x6D","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x62\x6C\x69\x6E\x2D\x61\x37\x30\x34\x33\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x69\x6F\x2E\x63\x6F\x6D","\x67\x6F\x62\x6C\x69\x6E\x2D\x61\x37\x30\x34\x33","\x67\x6F\x62\x6C\x69\x6E\x2D\x61\x37\x30\x34\x33\x2E\x61\x70\x70\x73\x70\x6F\x74\x2E\x63\x6F\x6D","\x38\x38\x32\x34\x32\x37\x32\x35\x37\x30\x33\x34","\x69\x6E\x69\x74\x69\x61\x6C\x69\x7A\x65\x41\x70\x70","\x64\x61\x74\x61\x62\x61\x73\x65","\x61\x75\x74\x68","\x73\x74\x6F\x72\x61\x67\x65","\x6D\x65\x73\x73\x61\x67\x69\x6E\x67"];var config={apiKey:_0x947c[0],authDomain:_0x947c[1],databaseURL:_0x947c[2],projectId:_0x947c[3],storageBucket:_0x947c[4],messagingSenderId:_0x947c[5]};firebase[_0x947c[6]](config);const db=firebase[_0x947c[7]]();const auth=firebase[_0x947c[8]]();const storage=firebase[_0x947c[9]]();const msg=firebase[_0x947c[10]]()
+		</script>
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script> 
+		
+    </head>
+
+    <body>
+		<nav class="light-blue lighten-1" role="navigation">
+			<div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">FAB</a>
+			  <ul class="right hide-on-med-and-down">
+				<li><a href="http://www.toolkit.co.nf">Website</a></li>
+				<li><a href="http://www.bgctmcwarriors.96.lt">BGCTMC WARRIORS</a></li>
+				<li><a href="http://www.facebook.com/forhad.fb">Facebook</a></li>
+			  </ul>
+				
+			  <ul id="nav-mobile" class="side-nav">
+				
+				<li>
+				  <div class="userView">
+					<div class="background">
+					  <img src="{!! base_url() !!}assets/img/office.jpg">
+					</div>
+					<a href="#!user"><img class="circle" src="{!! base_url() !!}assets/img/Alan.png"></a>
+					<a href="#!name"><span class="white-text name">John Doe</span></a>
+					<a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+				  </div>
+				</li>
+				<li><a href="http://toolkit.co.nf">Website</a></li>
+				<li><a href="http://www.bgctmcwarriors.96.lt">BGCTMC WARRIORS</a></li>
+				<li><a href="http://www.facebook.com/forhad.fb">Facebook</a></li>
+			  </ul>
+			  <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+			</div>
+		</nav>
+		  <div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+			  <br><br>
+			  <h1 class="header center orange-text">Welcome To My Personal App</h1>
+			  <div class="row center">
+				<h5 class="header col s12 light">Stay away from this site because it is good for nothing. So don't waste your time</h5>
+			  </div>
+			  <div class="row center">
+				<a href="http://www.bgctmcwarriors.96.lt" id="download-button" class="btn-large waves-effect waves-light orange">Visit My Clan Website</a>
+			  </div>
+			  <br><br>
+
+			</div>
+		  </div>
+		<div class="container">
+			<div class="section">
+			<a href="#" id="signOut"></a>
+			<script>
+			auth.onAuthStateChanged(function(user) {
+				if (user) {
+				  var email = user.email;
+					var uid = user.uid;
+					Materialize.toast(email + ' : ' + uid, 5000);
+					window.location.replace("index.html");
+				} else {
+					Materialize.toast('hola', 5000);
+				}
+			});
+			</script>
+				<div class="row">
+					
+					<div class="col s6">
+						<div class="card-panel">
+							<div class="icon-block">
+							<h2 class="center light-blue-text"><i class="large material-icons">lock_open</i></h2>
+							<h5 class="center">Login with Email & Password</h5>
+							
+							<div class="row">
+								
+							</div>
+							
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="email" type="email" class="validate">
+									<label for="email">Email</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="password" type="password" class="validate">
+									<label for="password">Password</label>
+								</div>
+						    </div>
+							<div class="row">
+								
+								<div class="input-field col s12 offset-s3">
+									<button id="loginBtn" class="btn waves-effect waves-light" type="button">Sign In
+										<i class="material-icons right">vpn_key</i>
+								    </button>
+								</div>
+							</div>
+							
+						
+						  </div>
+						  </div>
+						</div>
+						
+						<div class="col s6">
+						<div class="card-panel">
+							<div class="icon-block">
+							<h2 class="center light-blue-text"><i class="large material-icons">lock_outline</i></h2>
+							<h5 class="center">Sign Up</h5>
+							
+							<div class="row">
+								
+							</div>
+							
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="email" type="email" class="validate">
+									<label for="email">Email</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="password" type="password" class="validate">
+									<label for="password">Password</label>
+								</div>
+						    </div>
+							<div class="row">
+								
+								<div class="input-field col s12 offset-s3">
+									<button id="signUp" class="btn waves-effect waves-light" type="button">Sign Up
+										<i class="material-icons right">send</i>
+								    </button>
+								</div>
+							</div>
+							
+						
+						  </div>
+						  </div>
+						</div>
+					</div> <!-- end row -->
+					
+					
+				</div>
+			</div>
+		</div>
+		
+		<footer class="page-footer footer grey lighten-4">
+			<div class="container">
+				<div class="row">
+					<div class="col s6 grey-text">
+						2017 &copy; - ARSB - All right reserved.
+					</div>
+					<div class="col s6 social grey-text">
+						<ul class="collection">
+							<li class="collection-item">
+								<a href="http://www.toolkit.co.nf" class="grey-text">Website</a>
+							</li>
+							<li class="collection-item">
+								<a href="http://www.bgctmcwarriors.96.lt" class="grey-text">BGCTMC WARRIORS</a>
+							</li>
+							<li class="collection-item">
+								<a href="http://www.facebook.com/forhad.fb" class="grey-text">Facebook</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="assets/js/login.js"></script> 
+		
+    </body>
+  </html>
