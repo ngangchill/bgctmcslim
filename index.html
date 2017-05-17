@@ -179,7 +179,7 @@
 			function test(){
 				var email = document.getElementById("email").value;
 				var password = document.getElementById("password").value;
-				var cocid = document.getElementById("cocid").value;
+				var cocID = document.getElementById("cocid").value;
 				var created_at = document.getElementById("created_at").value;
 				// check email
 				
@@ -205,6 +205,10 @@
 					auth.onAuthStateChanged(function(user) {
 					if (user) {
 						add.set(data);
+						email = "";
+						password = "";
+						cocID = "";
+						created_at = "";
 					} else {
 						Materialize.toast('Login first to add content.', 5000);
 					}
