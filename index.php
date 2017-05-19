@@ -47,13 +47,13 @@ $app->add(new \Zeuxisoo\Whoops\Provider\Slim\WhoopsMiddleware);
     $blade = new Factory($viewResolver, $viewFinder, $eventDispatcher);
 
     // Render template with page.blade.php
+    
+
+$app->get('/', function () use($blade){
     $templateData = [
         'title' => 'Title',
         'text' => 'This is my text!',
     ];
-
-$app->get('/', function () use($blade){
-    
     echo $blade->make('page', $templateData)->render();
 });
 
