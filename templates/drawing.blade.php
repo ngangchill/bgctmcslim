@@ -1,4 +1,4 @@
-@extends('layouts')
+@extends('layout')
 
 @push('styles')
     <link rel="stylesheet" href="assets/css/drawing.css">
