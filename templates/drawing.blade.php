@@ -7,7 +7,7 @@
 @section('content')
     <div class="section">
         <div class="row">
-            <div class="col s9">
+            <div class="col s12">
                 <canvas id="drawing-canvas" width="480" height="420"></canvas>
                 <div id="colorholder"></div>
             </div>
