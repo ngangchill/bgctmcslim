@@ -22,9 +22,7 @@ use Illuminate\View\FileViewFinder;
 
 $app = new \Slim\Slim();
 $app->add(new \Zeuxisoo\Whoops\Provider\Slim\WhoopsMiddleware);
-
-$app->get('/', function () {
-    // Configuration
+// Configuration
     // Note that you can set several directories where your templates are located
     $pathsToTemplates = [__DIR__ . '/templates'];
     $pathToCompiledTemplates = __DIR__ . '/compiled';
@@ -46,7 +44,7 @@ $app->get('/', function () {
     });
 
     $viewFinder = new FileViewFinder($filesystem, $pathsToTemplates);
-    $viewFactory = new Factory($viewResolver, $viewFinder, $eventDispatcher);
+    $blade = new Factory($viewResolver, $viewFinder, $eventDispatcher);
 
     // Render template with page.blade.php
     $templateData = [
@@ -54,7 +52,9 @@ $app->get('/', function () {
         'text' => 'This is my text!',
     ];
 
-    echo $viewFactory->make('page', $templateData)->render();
+$app->get('/', function () {
+    
+    echo $blade->make('page', $templateData)->render();
 });
 
 $app->run();
