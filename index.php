@@ -52,7 +52,7 @@ $app->add(new \Zeuxisoo\Whoops\Provider\Slim\WhoopsMiddleware);
         'text' => 'This is my text!',
     ];
 
-$app->get('/', function () {
+$app->get('/', function () use($blade){
     
     echo $blade->make('page', $templateData)->render();
 });
