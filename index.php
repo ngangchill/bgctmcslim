@@ -51,7 +51,7 @@ $app->add(new \Zeuxisoo\Whoops\Provider\Slim\WhoopsMiddleware);
 
 $app->get('/', function () use($blade){
     $templateData = [
-        'title' => 'Skyfall',
+        'title' => 'Skyfall :: Home',
         'text' => 'This is my text!',
     ];
     echo $blade->make('page', $templateData)->render();
