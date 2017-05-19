@@ -1,7 +1,7 @@
 @extends('layout')
 
 @push('styles')
-    <link rel="stylesheet" href="/assets/css/drawing.css">
+    <link rel="stylesheet" href="http://skyfall.herokuapp.com/assets/css/drawing.css">
 @endpush
 
 @section('content')
@@ -29,7 +29,7 @@
 @endsection
 
 @push('scripts')
-    <script src="/assets/js/drawing.js"></script>
+    <script src="http://skyfall.herokuapp.com/assets/js/drawing.js"></script>
     <script>
             var canvas = document.getElementById('drawing-canvas');
             var ctx = canvas.getContext('2d');
