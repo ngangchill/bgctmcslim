@@ -49,7 +49,7 @@
                 ctx.drawImage(img, 0, 0, img.width, img.height,
                     centerShift_x, centerShift_y, img.width * ratio, img.height * ratio);
             }
-            img.src = '/assets/img/a.jpg';
+            img.src = 'http://skyfall.herokuapp.com/assets/img/a.jpg';
         </script>
 
 
