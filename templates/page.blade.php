@@ -46,6 +46,7 @@
 				<li><a href="http://www.toolkit.co.nf">Website</a></li>
 				<li><a href="http://www.bgctmcwarriors.96.lt">BGCTMC WARRIORS</a></li>
 				<li><a href="http://www.facebook.com/forhad.fb">Facebook</a></li>
+				<li id="headerInfo"><a href="#">Guest</a></li>
 			  </ul>
 
 			  <ul id="nav-mobile" class="side-nav">
@@ -90,7 +91,7 @@
 							
 							</tbody>
 							</table>
-							<p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+							<p id="info" class="light"></p>
 						  </div>
 						</div>
 					</div>
@@ -218,6 +219,9 @@
 			
 			auth.onAuthStateChanged(function(user) {
 			if (user) {
+			// bind username to nam
+			var userInfo = document.getElementById("headerInfo");
+			userInfo.innerText = user.displayName;
 			
 			var contactRef = db.ref('hmail');					
 			//		
@@ -284,6 +288,6 @@
       });
     })(jQuery); 
   </script>
-  
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
     </body>
   </html>
