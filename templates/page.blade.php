@@ -9,6 +9,7 @@
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="icon" href="favicon.ico" sizes="32x32">
+		<title>{{ $title or "SKY Fall" }}</title>
 		<!--  Android 5 Chrome Color-->
 		<meta name="theme-color" content="#EE6E73">
 		<!-- Compiled and minified CSS -->
