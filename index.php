@@ -52,7 +52,8 @@ $app->add(new \Zeuxisoo\Whoops\Provider\Slim\WhoopsMiddleware);
 $app->get('/', function () use($blade){
     $templateData = [
         'title' => 'Skyfall :: Home',
-        'text' => 'This is my text!',
+        'headerText' => 'This is my text!',
+        'ip' => $_SERVER['REMOTE_ADDR'],
     ];
     echo $blade->make('page', $templateData)->render();
 });
