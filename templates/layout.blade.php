@@ -10,6 +10,7 @@
 		<title>{{ $title or "SKY Fall" }}</title>
 		<meta name="theme-color" content="#EE6E73">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
     @stack('styles')
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
@@ -56,7 +57,7 @@
 		<div class="container">        
     	@yield('content')
 		</div>
-		
+		 @stack('bottom')
 		<footer class="page-footer footer grey lighten-4">
 			<div class="container">
 				<div class="row">
